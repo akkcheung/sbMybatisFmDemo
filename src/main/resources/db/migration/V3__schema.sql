@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS EMPLOYEE;
+DROP TABLE IF EXISTS PROJECT;
+DROP TABLE IF EXISTS EMPLOYEE_PROJECT;
+
+
+CREATE TABLE EMPLOYEE (
+  employee_id INTEGER PRIMARY KEY NOT NULL,
+  first_name varchar(50) NOT NULL,
+  last_name varchar(50) NOT NULL
+);
+
+CREATE TABLE PROJECT (
+  project_id INTEGER PRIMARY KEY NOT NULL,
+  title varchar(50) NOT NULL
+);
+
+CREATE TABLE EMPLOYEE_PROJECT (
+  employee_id INTEGER NOT NULL,
+  project_id INTEGER NOT NULL,
+  PRIMARY KEY (employee_id, project_id), 
+    FOREIGN KEY (employee_id) REFERENCES EMPLOYEE(employee_id), 
+    FOREIGN KEY (project_id) REFERENCES PROJECT(project_id)
+);
