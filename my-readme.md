@@ -64,3 +64,23 @@ https://www.beekeeperstudio.io/blog/guide-to-boolean-columns-in-sqlite
 https://stackoverflow.com/questions/20657566/how-to-implement-manytomany-relationship-in-mybatis
 
 https://www.javadevjournal.com/spring/spring-session-with-jdbc/
+
+https://www.techgeeknext.com/spring-boot/spring-boot-session-management
+
+2023-1-25
+
+https://www.javaguides.net/2018/10/user-registration-module-using-springboot-springmvc-springsecurity-hibernate5-thymeleaf-mysql.html
+
+https://www.baeldung.com/spring-security-csrf
+
+https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/
+
+https://hellokoding.com/form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/
+
+2023-1-29
+
+https://howtodoinjava.com/spring5/security/login-form-example/#231-custom-login-page
+
+https://bcrypt-generator.com/
+
+https://www.baeldung.com/spring-security-granted-authority-vs-role

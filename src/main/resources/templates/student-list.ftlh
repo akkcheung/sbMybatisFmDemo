@@ -7,24 +7,19 @@
     <title>FreeMarker Spring Boot Example</title>
 </head>
 <body>
-   <div>
-     <nobr>
- 		<a href="/students/add">Add Student</a> 
- 	  </nobr>
-</div>
-
-<br/><br/>
+   
 <table border="1">
-<tr>
-	<th>Name</th>
-	<th>Email</th>
-</tr>
-<#list students as student>
-<tr>
-	<td><a href="${student.id}">${student.name}</td>
-	<td>${student.email}</td>
-</tr>
-</#list>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+	</tr>
+	<#list users as user>
+		<tr>
+			<td><a href="${user.id}">${user.name}</td>
+			<td>${user.email}</td>
+		</tr>
+	</#list>
 </table>
+
 </body>
 </html>
