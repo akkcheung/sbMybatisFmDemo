@@ -84,3 +84,15 @@ https://howtodoinjava.com/spring5/security/login-form-example/#231-custom-login-
 https://bcrypt-generator.com/
 
 https://www.baeldung.com/spring-security-granted-authority-vs-role
+
+2023-1-30
+
+https://docs.spring.io/spring-framework/docs/3.0.0.M4/reference/html/ch16s04.html
+
+https://www.marcobehler.com/guides/spring-security
+
+https://polinwei.com/freemarker-spring-boot-security-tag/
+
+https://github.com/spring-projects/spring-security/issues/3275
+
+https://stackoverflow.com/questions/65705637/how-to-get-current-authenticated-user-from-current-session-in-the-freemarker-tem

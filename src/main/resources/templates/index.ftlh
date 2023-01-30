@@ -1,3 +1,5 @@
+<#import "/spring.ftl" as spring />
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,13 +28,24 @@
 		            <li><a href="/login"></a>Login</li>	           		            
 		            <div></div>
 		        </ul>
-		    
 		</nav>
 	</div>
 
 	<div class="uk-background-default">
-		<div>
-	    	<h3> Welcome to Registration and Login System</h3>
+	
+	
+	 	<#if SPRING_SECURITY_CONTEXT??>
+	 	
+	 		<#assign 
+	 			user = SPRING_SECURITY_CONTEXT.authentication.principal
+	 			username = user.getUsername()
+	 		>
+	 		logged in ${username}
+	 	</#if>
+	    
+	    <h3> Welcome to Registration and Login System</h3>
+	    
+	    
 	    </div>  
 	</div>
 	

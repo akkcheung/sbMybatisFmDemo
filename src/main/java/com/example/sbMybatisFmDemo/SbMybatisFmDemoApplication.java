@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
+
 import com.example.sbMybatisFmDemo.mapper.StudentMapper;
 
 @SpringBootApplication
@@ -17,6 +18,7 @@ public class SbMybatisFmDemoApplication {
 
 	public SbMybatisFmDemoApplication(StudentMapper studentMapper) {
 		this.studentMapper = studentMapper;
+		
 	}
 
 	public static void main(String[] args) {

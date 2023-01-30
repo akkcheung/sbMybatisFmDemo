@@ -26,6 +26,7 @@
 		            <!--<li class="uk-active"><a href=""></a>Login</li> -->
 		             <!-- <li class="uk-parent"><a href=""></a></li>  -->
 		           <li><a href="/logout"></a>Logout</li>
+		           <li><a href="/index"></a>home</li>
 		            <div></div>
 		        </ul>
 		    
@@ -33,6 +34,7 @@
 	</div>
 
 <div class="uk-background-default">
+
 <table border="1">
 <tr>
 	<th>Name</th>
