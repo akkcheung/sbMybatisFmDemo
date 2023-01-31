@@ -1,4 +1,3 @@
-<#import "/spring.ftl" as spring />
 
 <!doctype html>
 <html lang="en">
@@ -40,7 +39,7 @@
 	 			user = SPRING_SECURITY_CONTEXT.authentication.principal
 	 			username = user.getUsername()
 	 		>
-	 		logged in ${username}
+	 		logged in / 已登入 ${username} 
 	 	</#if>
 	    
 	    <h3> Welcome to Registration and Login System</h3>

@@ -96,3 +96,10 @@ https://polinwei.com/freemarker-spring-boot-security-tag/
 https://github.com/spring-projects/spring-security/issues/3275
 
 https://stackoverflow.com/questions/65705637/how-to-get-current-authenticated-user-from-current-session-in-the-freemarker-tem
+
+2023-1-31
+
+https://www.baeldung.com/spring-boot-internationalization
+
+https://www.javachinna.com/sending-email-using-spring-boot-2-internationalization-i18n-and-freemarker-html-email-template-with-inline-image-and-attachment/
+
