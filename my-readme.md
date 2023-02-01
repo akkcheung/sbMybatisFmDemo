@@ -14,6 +14,8 @@ curl -X PUT localhost:8080/v1/students/3 \
 
 curl -X DELETE localhost:8080/v1/students/3
 
+./mvnw test
+
 2023-1-20
 
 https://www.youtube.com/watch?v=_thI-4AF7M8&t=7s
@@ -103,3 +105,18 @@ https://www.baeldung.com/spring-boot-internationalization
 
 https://www.javachinna.com/sending-email-using-spring-boot-2-internationalization-i18n-and-freemarker-html-email-template-with-inline-image-and-attachment/
 
+https://www.baeldung.com/spring-bean-scopes
+
+https://www.baeldung.com/spring-boot-testing
+
+https://veeevek.medium.com/springboot-separate-unit-integration-test-336abbc38ef4
+
+Auto-wiring is the process of looking for a potential object match requiring dependency and injecting it into the target object. This project is mainly performed by AutowiredAnnotationBeanPostProcessor and Java Reflection API.
+
+@Inject and @Autowired both annotations are used for autowiring in your application. @Inject annotation is part of Java CDI which was introduced in Java 6, whereas @Autowire annotation is part of spring framework. Both annotations fulfill same purpose therefore, anything of these we can use in our application.
+
+@Resource will narrow down the search first by name then by type and finally by Qualifiers (ignored if match is found by name). @Autowired and @Inject will narrow down the search first by type then by qualifier and finally by the name.
+
+https://spring.io/guides/gs/testing-web/
+
+https://www.baeldung.com/introduction-to-assertj
