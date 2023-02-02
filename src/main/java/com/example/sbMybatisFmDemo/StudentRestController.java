@@ -29,32 +29,32 @@ public class StudentRestController {
 	}
 
 	// @GetMapping("/findAllStudents")
-	@GetMapping("/v1/students")
+	@GetMapping("/api/v1/students")
 	public List<Student> findAllStudents() {
 		return studentMapper.findAllStudents();
 		
 	}
 
-	@GetMapping("/v1/students/{id}")
+	@GetMapping("/api/v1/students/{id}")
 	public Student findStudentById(@PathVariable("id") int id) {
 		return studentMapper.findStudentById(id);
 		
 	}
 	
 	// @PostMapping("/insertStudent")
-	@PostMapping("/v1/students")
+	@PostMapping("/api/v1/students")
 	public void insertStudent(@RequestBody Student student) {
 		studentMapper.insertStudent(student);
 	}
 
 	// @PutMapping("/updateStudent/{id}")
-	@PutMapping("/v1/students/{id}")
+	@PutMapping("/api/v1/students/{id}")
 	public void updateStudent(@RequestBody Student student, @PathVariable("id") int id) {
 		studentMapper.updateStudent(student, id);
 	}
 
 	// @DeleteMapping("/deleteStudent/{id}")
-	@DeleteMapping("/v1/students/{id}")
+	@DeleteMapping("/api/v1/students/{id}")
 	public void deleteStudent(@PathVariable("id") int id) {
 		studentMapper.deleteStudent(id);
 	}

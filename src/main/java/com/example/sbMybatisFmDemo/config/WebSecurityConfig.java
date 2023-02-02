@@ -38,11 +38,11 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 		 http.csrf().disable()
 			.authorizeHttpRequests((requests) -> requests
 				.requestMatchers("/hello").permitAll()
-				.requestMatchers("/index").permitAll()
-				.requestMatchers("/register/**").permitAll()
-				.requestMatchers("/international").permitAll()
+				.requestMatchers("/index", "/register/**" ).permitAll()
 				.requestMatchers("/users").hasRole("ADMIN")
-				.requestMatchers("/*.js").permitAll()
+				.requestMatchers("/international", "*.js").permitAll()
+				.requestMatchers("/api/v1/**").permitAll()
+				.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()				
 				.anyRequest().authenticated()
 			)
 //			.formLogin((form) -> form			

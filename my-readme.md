@@ -16,6 +16,10 @@ curl -X DELETE localhost:8080/v1/students/3
 
 ./mvnw test
 
+http://localhost:8080/swagger-ui/index.html
+
+http://localhost:8080/v3/api-docs
+
 2023-1-20
 
 https://www.youtube.com/watch?v=_thI-4AF7M8&t=7s
@@ -117,6 +121,12 @@ Auto-wiring is the process of looking for a potential object match requiring dep
 
 @Resource will narrow down the search first by name then by type and finally by Qualifiers (ignored if match is found by name). @Autowired and @Inject will narrow down the search first by type then by qualifier and finally by the name.
 
+2023-2-1
+
 https://spring.io/guides/gs/testing-web/
 
 https://www.baeldung.com/introduction-to-assertj
+
+https://www.baeldung.com/spring-rest-openapi-documentation
+
+https://springdoc.org/v2/#getting-started
