@@ -20,6 +20,10 @@ http://localhost:8080/swagger-ui/index.html
 
 http://localhost:8080/v3/api-docs
 
+http POST :8080/authenticate login="sue@email.com" password="suesue"
+
+http :8080/users 'Authorization: Bearer {jwt-token}'
+
 2023-1-20
 
 https://www.youtube.com/watch?v=_thI-4AF7M8&t=7s
@@ -130,3 +134,17 @@ https://www.baeldung.com/introduction-to-assertj
 https://www.baeldung.com/spring-rest-openapi-documentation
 
 https://springdoc.org/v2/#getting-started
+
+https://spring.io/blog/2022/05/24/preparing-for-spring-boot-3-0
+
+2023-2-2
+
+https://bootify.io/spring-rest/rest-api-spring-security-with-jwt.html
+
+https://www.baeldung.com/spring-security-session
+
+https://www.appsdeveloperblog.com/service-annotation-in-spring/
+
+https://www.baeldung.com/java-auth0-jwt
+
+https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/

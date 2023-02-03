@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.sbMybatisFmDemo.mapper.UserRoleMapper;
 import com.example.sbMybatisFmDemo.model.Role;
 import com.example.sbMybatisFmDemo.model.User;
-import com.example.sbMybatisFmDemo.security.CustomUserDetailsService;
-
 import jakarta.validation.Valid;
 
 @Controller

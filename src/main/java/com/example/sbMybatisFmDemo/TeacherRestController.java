@@ -21,7 +21,7 @@ public class TeacherRestController {
 		this.teacherMapper = teacherMapper;
 	}
 
-	@GetMapping("/v1/teachers")
+	@GetMapping("/api/v1/teachers")
 	public List<Teacher> getTeachers() {
 		// return teacherMapper.getTeachers();
 		List <Teacher> results = teacherMapper.getTeachers();
