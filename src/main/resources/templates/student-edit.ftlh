@@ -14,7 +14,7 @@
           <#assign urlAction>/students/add</#assign>
           <#assign submitTitle>Create</#assign>
      <#else>
-           <#assign urlAction>${'/students/' + student.id + '/edit'}</#assign>
+           <#assign urlAction>${'/students/' + student.id() + '/edit'}</#assign>
            <#assign submitTitle>Update</#assign>
      </#if>
      
@@ -24,8 +24,8 @@
             
             <form action="${urlAction}" name="student" method="POST">
             
-               Name: <input type="text" name="name" value="${(student.name)!''}" />  <br/>
-               Email: <input type="text" name="email" value="${(student.email)!''}" /> <br/>
+               Name: <input type="text" name="name" value="${(student.name())!''}" />  <br/>
+               Email: <input type="text" name="email" value="${(student.email())!''}" /> <br/>
                
                <input type="submit" value="${submitTitle}" />
             </form>

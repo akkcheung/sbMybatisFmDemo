@@ -24,7 +24,9 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
-import com.example.sbMybatisFmDemo.JwtRequestFilter;
+import com.example.sbMybatisFmDemo.filter.JwtRequestFilter;
+
+
 
 @Configuration
 @EnableWebSecurity
@@ -60,20 +62,20 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 				.requestMatchers("/authenticate").permitAll()
 				.anyRequest().authenticated()
 			)						
-//			.formLogin((form) -> form
-//			  .loginPage("/login")
-//			  // .loginProcessingUrl("/login")
-//			  .usernameParameter("email")
-//			  // .passwordParameter("passcode")
-//			  .defaultSuccessUrl("/users")
-//			  .permitAll()
-//			  )
-//			.logout((logout) -> logout
-//					.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//					.permitAll()
-//			)
-			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-			.and().addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)			
+			.formLogin((form) -> form
+			  .loginPage("/login")
+			  // .loginProcessingUrl("/login")
+			  .usernameParameter("email")
+			  // .passwordParameter("passcode")
+			  .defaultSuccessUrl("/users")
+			  .permitAll()
+			  )
+			.logout((logout) -> logout
+					.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+					.permitAll()
+			)
+//			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//			.and().addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)			
 			;
 
 		return http.build();

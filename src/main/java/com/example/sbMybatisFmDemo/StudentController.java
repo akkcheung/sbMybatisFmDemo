@@ -38,7 +38,7 @@ public class StudentController {
 	@RequestMapping(value = { "/students/add" }, method = RequestMethod.GET)
 	public String showAdd(Model model) {
 
-		Student student = new Student();
+		Student student = null ;
 		
 		model.addAttribute("add", true);
 		model.addAttribute("student", student);
@@ -113,7 +113,7 @@ public class StudentController {
 	    try {
 	    	// student.setId(id);
 	    	studentMapper.updateStudent(student, id);
-	        return "redirect:/students/" + String.valueOf(student.getId());
+	    	return "redirect:/students/" + String.valueOf(student.id());
 
 	    } catch (Exception ex) {
 

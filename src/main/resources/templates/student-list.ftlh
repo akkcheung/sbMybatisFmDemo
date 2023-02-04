@@ -13,10 +13,10 @@
 		<th>Name</th>
 		<th>Email</th>
 	</tr>
-	<#list users as user>
+	<#list students as user>
 		<tr>
-			<td><a href="${user.id}">${user.name}</td>
-			<td>${user.email}</td>
+			<td><a href="${user.id()}">${user.name()}</td>
+			<td>${user.email()}</td>
 		</tr>
 	</#list>
 </table>
