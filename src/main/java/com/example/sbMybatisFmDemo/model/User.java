@@ -10,7 +10,7 @@ public class User {
 	
 	private Integer id;
 	
-	@NotEmpty
+	@NotEmpty (message="{myBean.username.empty.message}")
 	private String username;
 	private List<Role> roles = new ArrayList<>();
 	

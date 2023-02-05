@@ -148,3 +148,7 @@ https://www.appsdeveloperblog.com/service-annotation-in-spring/
 https://www.baeldung.com/java-auth0-jwt
 
 https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/
+
+2023-2-3
+
+https://www.baeldung.com/java-record-keyword

@@ -16,12 +16,12 @@
                 <tr>
                     <td>ID</td>
                     <td>:</td>
-                    <td>${student.id()}</td>
+                    <td>${student.id}</td>
                 </tr>
                 <tr>
                     <td>Name</td>
                     <td>:</td>
-                    <td>${student.name()}</td>
+                    <td>${student.name}</td>
                 </tr>
              </table>
              <br></br>
@@ -32,8 +32,8 @@
                 </form>
             <#else>
 	             <div>
-	                <a href="${'/students/' + student.id() + '/edit'}">Edit</a> |
-	                <a href="${'/students/' + student.id() + '/delete'}">Delete</a>
+	                <a href="${'/students/' + student.id + '/edit'}">Edit</a> |
+	                <a href="${'/students/' + student.id + '/delete'}">Delete</a>
 	             </div>
              </#if>
          </#if>

@@ -1,4 +1,38 @@
 package com.example.sbMybatisFmDemo.model;
 
-public record Student  (Integer id, String name, String email) {}
+import jakarta.validation.constraints.NotEmpty;
 
+public class Student {
+
+	Integer id;
+
+	@NotEmpty
+	String name;
+
+	String email;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+}

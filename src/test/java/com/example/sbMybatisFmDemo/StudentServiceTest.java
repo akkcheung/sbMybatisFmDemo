@@ -23,7 +23,7 @@ public class StudentServiceTest {
 				
 		List <Student> students = studentMapper.findAllStudents();
 		// assertThat(students.get(0).getName().equals("aa"));
-		assertThat(students.get(0).name().equals("aa"));
+		assertThat(students.get(0).getName().equals("aa"));
 		assertThat(students.size()).isEqualTo(3);
 		
 	}

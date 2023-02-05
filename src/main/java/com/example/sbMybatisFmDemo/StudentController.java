@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.sbMybatisFmDemo.mapper.StudentMapper;
 import com.example.sbMybatisFmDemo.model.Student;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class StudentController {
@@ -38,7 +41,7 @@ public class StudentController {
 	@RequestMapping(value = { "/students/add" }, method = RequestMethod.GET)
 	public String showAdd(Model model) {
 
-		Student student = null ;
+		Student student = new Student() ;
 		
 		model.addAttribute("add", true);
 		model.addAttribute("student", student);
@@ -47,24 +50,18 @@ public class StudentController {
 	}
 
 	@PostMapping(value = "/students/add")
-	public String add(Model model,
-			@ModelAttribute("student") Student student) {
-		try {
-			studentMapper.insertStudent(student);
-			// return "redirect:/student/" + String.valueOf(newNote.getId());
-			return "redirect:/students/list";
+	public String add(
+			@Valid Student student, BindingResult bindingResult, Model model) {
 
-		} catch (Exception ex) {
-			String errorMessage = ex.getMessage();
-
-			// logger.error(errorMessage);
-			System.out.println(errorMessage);		
-			
-			model.addAttribute("errorMessage", errorMessage);
+		if (bindingResult.hasErrors()) {
+			model.addAttribute("student", student);
 			model.addAttribute("add", true);
 
-			return "student-list";
+			return "student-edit";
 		}
+
+		studentMapper.insertStudent(student);
+		return "redirect:/students/list";
 
 	}
 	
@@ -105,30 +102,19 @@ public class StudentController {
 
 	}
 	
-	@PostMapping(value = {"/students/{id}/edit"})
-	public String update(Model model,
-	        @PathVariable long id,   
-	        @ModelAttribute("student") Student student) {
+	@PostMapping(value = { "/students/{id}/edit" })
+	public String update(@Valid Student student, BindingResult bindingResult, Model model, @PathVariable long id
+	) {
 
-	    try {
-	    	// student.setId(id);
-	    	studentMapper.updateStudent(student, id);
-	    	return "redirect:/students/" + String.valueOf(student.id());
+		if (bindingResult.hasErrors()) {
+			model.addAttribute("student", student);
+			model.addAttribute("add", false);
 
-	    } catch (Exception ex) {
+			return "student-edit";
+		}
 
-	        // log exception first, 
-	        // then show error
-
-	        String errorMessage = ex.getMessage();            
-
-	        // logger.error(errorMessage);
-	        model.addAttribute("errorMessage", errorMessage);
-	        model.addAttribute("add", false);
-
-	        return "student-edit";
-
-	    }
+		studentMapper.updateStudent(student, id);
+		return "redirect:/students/" + String.valueOf(student.getId());
 
 	}
 	
