@@ -17,8 +17,13 @@
   	  <label class="uk-form-label" for="form-stacked-text">User Name</label>
   	  <div class="uk-form-controls">      	
       	<@spring.bind "user.username"/>
+      	<#if spring.status.error>
+      		<#assign danger>uk-form-danger</#assign>
+      	<#else>
+      		<#assign danger></#assign>
+      	</#if>
         <input type="text"
-        	class="uk-input uk-form-width-medium uk-form-danger"
+        	class="uk-input uk-form-width-medium ${danger}"
         	placeholder="Enter username"
             name="${spring.status.expression}"
             value="${spring.status.value!''}"/><@spring.showErrors "<br>"/>
@@ -29,8 +34,13 @@
   <div class="uk-margin">
    	<label class="uk-form-label" for="form-stacked-text">Email</label>
         <@spring.bind "user.email"/>
+        <#if spring.status.error>
+      		<#assign danger>uk-form-danger</#assign>
+      	<#else>
+      		<#assign danger></#assign>
+      	</#if>
         <input type="text"
-        	class="uk-input uk-form-width-medium"
+        	class="uk-input uk-form-width-medium ${danger}"
         	placeholder="Enter email address"
             name="${spring.status.expression}"
             value="${spring.status.value!''}"/>
