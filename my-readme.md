@@ -152,3 +152,9 @@ https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/
 2023-2-3
 
 https://www.baeldung.com/java-record-keyword
+
+2023-2-5
+
+https://www.webjars.org/  //uikit htmx
+
+https://github.com/spilth/annotated-spring-episode-003

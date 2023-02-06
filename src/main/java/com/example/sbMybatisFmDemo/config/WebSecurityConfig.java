@@ -60,11 +60,12 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 				.requestMatchers("/international", "*.js").permitAll()
 				.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
 				.requestMatchers("/authenticate").permitAll()
+				.requestMatchers("/webjars/**").permitAll()
 				.anyRequest().authenticated()
 			)						
 			.formLogin((form) -> form
 			  .loginPage("/login")
-			  // .loginProcessingUrl("/login")
+			  .loginProcessingUrl("/login")
 			  .usernameParameter("email")
 			  // .passwordParameter("passcode")
 			  .defaultSuccessUrl("/users")
